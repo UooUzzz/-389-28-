@@ -1,0 +1,17 @@
+main void(){
+  class Solution {
+  int strStr(String haystack, String needle) {
+    if(needle == haystack) return 0;
+    int left = 0;
+    int needleLen = needle.length;
+    while (left <= haystack.length - needleLen)  {
+      String word = haystack.substring(left, left + needleLen);
+      if (word == needle) {
+        return left;
+      }
+      left++;
+    }
+    return -1;
+  }
+}
+}
