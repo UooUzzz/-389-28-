@@ -1,0 +1,18 @@
+class Solution {
+  double average(List<int> salary) {
+    // 최대값, 최소값 찾기(reduce함수 사용)
+    int max = salary.reduce((a, b) => a > b ? a : b);
+    int min = salary.reduce((a, b) => a < b ? a : b);
+
+    // 찾아서 제거하기(remove 사용)
+    salary.remove(max);
+    salary.remove(min);
+
+    // 남은 요소 합
+    int sum = salary.reduce((total, num) => total + num);
+
+    // 남은 요소 합 / 남은 요소 개수
+    return sum / salary.length;
+
+  }
+}
