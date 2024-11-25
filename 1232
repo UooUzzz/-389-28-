@@ -1,0 +1,23 @@
+class Solution {
+  bool checkStraightLine(List<List<int>> coordinates) {
+    // (x1, y1) (x2, y2) 기울기 = (y2-y1)/(x2-x1) 
+    // [[]]형태니까 [][]로 좌표
+    int x1 = coordinates[0][0], y1 = coordinates[0][1];
+    int x2 = coordinates[1][0], y2 = coordinates[1][1];
+
+    // 첫 두점기준으로 기울기 설정 dx, dy
+    // (x2-x1)*(y2-y1)
+    int dx = x2 - x1;
+    int dy = y2 - y1;
+
+    // (y-y1) * (x2-x1) = (x-x1) * (y2-y1)
+    for (int i = 2; i < coordinates.length; i++) {
+        int x = coordinates[i][0], y = coordinates[i][1];
+
+        if((y - y1)*dx != (x - x1)*dy) {
+            return false; // 직선위에 없음
+        }
+    }
+
+    return true; // 모든 점이 직선위에 있음
+  }
