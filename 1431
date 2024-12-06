@@ -1,0 +1,11 @@
+class Solution {
+  List<bool> kidsWithCandies(List<int> candies, int extraCandies) {
+    // List에서 최대값 찾기 - reduce 함수 (가장 많은 사탕 아이 찾기)
+    int max = candies.reduce((a, b) => a > b ? a : b);
+
+    // map함수 , List<bool>반환 (각 아이 가장 많은 사탕 가질 수 있는지 확인)
+    // extraCandies
+    return candies.map((e) => e + extraCandies >= max).toList();
+
+  }
+}
