@@ -1,0 +1,18 @@
+class Solution {
+  String reverseVowels(String s) {
+    // 모음 집합
+    final v = {'a', 'e', 'i', 'o', 'u'};
+
+    // 문자열 맨 앞과 맨 끝, 두개 포인터(left, right)
+    final ssList = s.split('');
+    int left = 0;
+    int right = ssList.length - 1;
+
+    // 모음 교환(교환 후 다음모음 찾기 한칸씩) -> 문자열 반환
+    
+
+
+
+
+  }
+}
