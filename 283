@@ -1,0 +1,19 @@
+class Solution {
+  void moveZeroes(List<int> nums) {
+    // 비-0 숫자 넣은 위치 추적 변수
+    int lastNonZeroIndex = 0;
+
+    // 순회
+    for (int i = 0; i < nums.length; i++) {
+      if (nums[i] != 0) {
+        nums[lastNonZeroIndex] = nums[i];
+        lastNonZeroIndex++;
+      }
+    }
+
+    // 0으로 채우기
+    for (int i = lastNonZeroIndex; i < nums.length; i++) {
+        nums[i] = 0;
+    }
+  }
+}
