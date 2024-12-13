@@ -1,0 +1,20 @@
+class Solution {
+  double findMaxAverage(List<int> nums, int k) {
+    double initSum = 0;
+    // 초기합 계산(k길이)
+    for (int i = 0; i < k; i++) {
+      initSum += nums[i];
+    }
+    // maxSum 현재 합이 최대일 때 기록
+    double maxSum = initSum;
+
+    // sum = sum - nums[i - k] + nums[i]
+    // 
+
+
+    
+    // 최대 합 maxSum을 k로 나누어 최대 평균 반환
+
+
+  }
+}
