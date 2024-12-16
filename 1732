@@ -1,0 +1,18 @@
+class Solution {
+  int largestAltitude(List<int> gain) {
+    int altitude = 0;
+    int maxAltitude = 0;
+
+    // gain 값 순회 하면서 altitude에 더해주기(현재 고도 계산 altitude)
+    for (int x in gain) {
+        altitude += x;
+        // 최대 고도 확인(altitude > maxAltitude return maxAltitude)
+        if (altitude > maxAltitude) {
+            maxAltitude = altitude;
+        }
+        
+    }
+    // 최대 고도 반환(maxAltitude)
+    ruturn maxAltitude;
+  }
+}
