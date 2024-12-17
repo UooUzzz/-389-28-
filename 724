@@ -1,0 +1,23 @@
+class Solution {
+  int pivotIndex(List<int> nums) {
+    int totalSum = nums.reduce((value, element) => value + element);   // totalSum 계산
+    int leftSum = 0;                                                  // leftSum을 0으로 초기화
+
+    // nums 순회 leftSum 업데이트
+    // 오른쪽합 totalSum - leftSum -nums[i] 
+    // leftSum과 비교
+    // leftSum == rightSum 인덱스 반환
+    // 그렇지 않으면 -1 반환
+
+    for (int i=0; i < nums.length; i++) {
+        int rightSum = totalSum - leftSum -nums[i];
+        if(leftSum == rightSum) {
+            return i;
+        }
+
+    }
+    return -1;
+
+    
+  }
+}
