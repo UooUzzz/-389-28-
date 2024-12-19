@@ -1,0 +1,15 @@
+class Solution {
+  List<List<int>> findDifference(List<int> nums1, List<int> nums2) {
+    // nums1 nums2 set 변환 - 중복 요소 제거
+    Set<int> set1 = nums1.toSet();
+    Set<int> set2 = nums2.toSet();
+
+    // set1.difference(set2)는 nums1에만 있는 원소들을 반환
+    Set<int> answer1 = set1.difference(set2)
+    // set2.difference(set1)는 nums2에만 있는 원소들을 반환
+    Set<int> answer2 = set2.difference(set1)
+    // [answer1, answer2] 형식으로 반환
+    List<int> union = answer1.union(answer2).toList();
+    return union;
+  }
+}
