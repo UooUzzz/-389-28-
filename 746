@@ -1,0 +1,17 @@
+class Solution {
+  int minCostClimbingStairs(List<int> cost) {
+    int n = cost.length; 
+
+    // 동적계획법(DP) dp[i] i번째 계단까지 올라가는 최소비용저장
+    
+
+
+    // dp[0] = cost[0], dp[1] = cost[1]
+    // dp[i] = cost[i] + min(dp[i-1], dp[i-2])
+    // dp[n-1] dp[n-2] 중 최소값 (마지막 도착 지점)
+
+
+
+
+  }
+}
