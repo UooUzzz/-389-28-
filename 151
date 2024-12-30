@@ -1,0 +1,17 @@
+class Solution {
+  String reverseWords(String s) {
+    // 문자열 양쪽 불필요한 공백 trim()으로 제거
+    // split(' ')을 사용 
+    // where((word) => word.isNotEmpty)이용해 빈문자열 필터링
+    List<String> words = s.trim().split(' ').where((word) => word.isNotEmpty).toList();
+
+
+
+    // 단어 리스트 reversed로 뒤집기
+    // join(' ')
+    return words.reversed.join(' ');
+
+
+
+  }
+}
