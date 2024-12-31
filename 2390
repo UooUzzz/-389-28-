@@ -1,0 +1,11 @@
+class Solution {
+  String removeStars(String s) {
+    // Stack 각문자 순회 *가 아닌경우 스택에 추가
+    // *인 경우 스택에서 최근추가문자 제거
+    // 마지막 남은 문자들 이어붙여 stack.join()  최종 결과 문자열 생성
+
+
+
+    return s.replaceAll("\\*", "");
+  }
+}
